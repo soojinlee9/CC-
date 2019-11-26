@@ -1,5 +1,6 @@
 //loads headlines and gifs
 //must figure out how to get nytimes API to work with user input for the date variable
+//I'm trying to use the p5.speech library to get the user's birthday and use that as an input to the nytimes api url
 
 var url = 'https://api.nytimes.com/svc/search/v2/articlesearch.json?facet=true&begin_date=19980519&end_date=19980519&api-key=ipc6mSQAIusgjG0I9fj0W3LX6upgUuG4';
 var nytBase = 'https://api.nytimes.com/svc/search/v2/articlesearch.json?facet=true&begin_date=';
