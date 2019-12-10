@@ -14,14 +14,14 @@ var gifBase = 'http://api.giphy.com/v1/gifs/search?&api_key=ZT9A3yvIA01CS7vifGuQ
 let word = [];
 
 function setup() {
-	noCanvas();
+	createCanvas(windowWidth, 100);
+	//noCanvas();
 	listen.start();
 	createElement('h1', 'When is your birthday (YYYYMMDD)?');
 	
 }
 
 function showResult() {
-	background(0);
 	var day = listen.resultString;
 	var date = day.replace(/\s/g, "");
 	console.log(date);
@@ -63,9 +63,12 @@ function headlines(data) {
 
 
 function gifs(info) {
+	//var imej = createImg(info.data[i].images.original.url);
 
-  for (var i=0; i < 3; i++) {
-    createImg(info.data[i].images.original.url);
+  for (var i=0; i < 5; i++) {
+  	var imej = createImg(info.data[i].images.fixed_height_downsampled.url);
+  	console.log(info.data[i].images.fixed_height_downsampled.width);
+  	imej.position(random(windowWidth-300),random(windowHeight-300));
   }
 }
 
