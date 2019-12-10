@@ -19,11 +19,12 @@ let word = [];
 let circs = [];
 let daet = [];
 
+
 function setup() {
 	createCanvas(windowWidth, windowHeight-100);
 	listen.start(); //starts listening
 	createElement('h1', 'When is your birthday (YYYYMMDD)?'); //inside html creates heading
-	//frameRate(10);
+
 	
 }
 
@@ -51,10 +52,8 @@ function showResult() {
 		for (var i=0; i < word.length; i++){
 			var gifUrl = gifBase + word[i]; //makes complete giphy api urls
 			
-		}
-		
+		}	
 	}
-	
 }
 
 function headlines(data) {
@@ -64,8 +63,7 @@ function headlines(data) {
     	createElement('h3', titles[i].abstract); //path to get detailed headline and displays headlines as headings
   		}	
 
-  	createElement('h1', 'Ready to choose your keywords? Go ahead, I\'m listening. Say "I\'m finished" when you are done and scroll up.');//creates headings on html page
-  	
+  	createElement('h1', 'Ready to choose your keywords? Go ahead, I\'m listening. Say "I\'m finished" when you are done and scroll up.');//creates headings on html page 	
 }
 
 
@@ -80,11 +78,7 @@ function gifs(info) {
   		imej.position(random(4)*300, 20*random(25));//randomly places img on canvas
 
   		circs.push(imej); //adds current imej into circs array
-
-
-
 	}
-
 
 }
 
@@ -101,5 +95,4 @@ function mousePressed() { //when mouse pressed, adds keywords in random order, s
 
     
 }
-
 
